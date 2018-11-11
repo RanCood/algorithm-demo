@@ -16,7 +16,6 @@ public class QueueBasedOnArray {
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
 
         System.out.println("head:" + queue.head);
         System.out.println("tail:" + queue.tail);

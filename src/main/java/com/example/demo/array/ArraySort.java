@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.array;
 
 /**
  * 数组排序

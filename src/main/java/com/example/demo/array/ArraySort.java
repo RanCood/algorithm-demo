@@ -13,7 +13,7 @@ public class ArraySort {
     public static int[] arr = {23, 54, 13, 45, 32, 23, 89, 19};
 
     public static void main(String[] args) {
-//        bubbleSort(arr);
+        bubbleSort(arr,arr.length);
 //        insertSort(arr);
     }
 
@@ -22,13 +22,13 @@ public class ArraySort {
      *
      * @param arr
      */
-    public static void bubbleSort(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 0; j < arr.length - i; j++) {
-                if (arr[j + 1] < arr[j]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+    public static void bubbleSort(int[] arr, int length) {
+        for (int i = 1; i < length; ++i) {
+            for (int j = 0; j < length - i; j++) {
+                if (arr[j+1] > arr[j]) {
+                    int tmp = arr[j+1];
+                    arr[j+1] = arr[j];
+                    arr[j] = tmp;
                 }
             }
         }
@@ -40,13 +40,13 @@ public class ArraySort {
             int value = arr[i];
             int j = i - 1;
             for (; j >= 0; j--) {
-                if (arr[j] > value){
-                    arr[j+1] = arr[j];
+                if (arr[j] > value) {
+                    arr[j + 1] = arr[j];
                 } else {
                     break;
                 }
             }
-            arr[j+1] = value;
+            arr[j + 1] = value;
         }
         printArr(arr);
     }

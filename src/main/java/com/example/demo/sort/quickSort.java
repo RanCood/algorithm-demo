@@ -30,7 +30,7 @@ public class quickSort {
     private static int partition(int[] arr, int start, int end) {
         int pivot = arr[end];
         int i = start;
-        for (int j=start;j<end;j++) {
+        for (int j = start; j < end; j++) {
             if (arr[j] < pivot) {
                 int tmp = arr[i];
                 arr[i] = arr[j];

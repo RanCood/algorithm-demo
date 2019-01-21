@@ -27,11 +27,10 @@ public class MergeSort {
         int intermediate = (start + end) / 2;
         mergeSortC(arr, start, intermediate);
         mergeSortC(arr, intermediate + 1, end);
-        merge(arr, start, end);
+        merge(arr, start, intermediate, end);
     }
 
-    private static void merge(int[] arr, int start, int end) {
-        int intermediate = (start + end) / 2;
+    private static void merge(int[] arr, int start, int intermediate, int end) {
         int[] tmp = new int[end - start + 1];
         int i = start, j = intermediate + 1, k = 0;
         while (i <= intermediate && j <= end) {

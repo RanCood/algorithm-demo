@@ -1,5 +1,6 @@
 package com.example.demo.sort;
 
+
 /**
  * @author zg
  * @date 2019/1/19 18:07
@@ -22,24 +23,25 @@ public class quickSort {
         if (start >= end) {
             return;
         }
-        int q = partition(arr, start, end);
-        quickSortC(arr, start, q - 1);
-        quickSortC(arr, q + 1, end);
+        int p = partition(arr, start, end);
+        quickSortC(arr, start, p - 1);
+        quickSortC(arr, p + 1, end);
     }
 
     private static int partition(int[] arr, int start, int end) {
-        int pivot = arr[end];
-        int i = start;
-        for (int j = start; j < end; j++) {
-            if (arr[j] < pivot) {
-                int tmp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = tmp;
+        int value = arr[end];
+        int i = start, j = start;
+        for (; j < end; j++) {
+            if (arr[j] < value) {
+                int tmp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = tmp;
                 i++;
             }
         }
         arr[end] = arr[i];
-        arr[i] = pivot;
+        arr[i] = value;
         return i;
     }
+
 }

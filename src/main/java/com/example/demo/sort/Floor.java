@@ -12,7 +12,7 @@ public class Floor {
 
     public static void main(String[] args) {
         long l = System.currentTimeMillis();
-        System.out.println(floorStep(45));
+        System.out.println(floorStep(200));
         System.out.println(System.currentTimeMillis() - l);
     }
 

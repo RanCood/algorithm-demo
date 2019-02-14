@@ -9,9 +9,3 @@ spring:
       idle-timeout: 600000
       connection-timeout: 60000
       max-lifetime: 1800000
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: *

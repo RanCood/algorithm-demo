@@ -1,11 +1,17 @@
-spring:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+guard:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/guard?useUnicode=true&amp
     username: root
     password: P@ssw0rd
-    hikari:
-      maximum-pool-size: 20
-      minimum-idle: 1
-      idle-timeout: 600000
-      connection-timeout: 60000
-      max-lifetime: 1800000
+rule:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/rule?useUnicode=true&amp
+    username: root
+    password: P@ssw0rd
+
+

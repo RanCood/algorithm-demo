@@ -100,25 +100,20 @@ public class InsertSort {
      * 20190206
      *
      * @param arr
-     * @param length
+     * @param n
      */
-    private static void insertSort(int[] arr, int length) {
-
-        for (int i = 1; i < length; i++) {
-            int j = i - 1;
+    public static void insertSort(int[] arr, int n) {
+        for (int i = 1; i < n; i++) {
             int value = arr[i];
+            int j = i - 1;
             for (; j >= 0; j--) {
                 if (arr[j] > value) {
-                    arr[j+1] = arr[j];
+                    arr[j + 1] = arr[j];
                 } else {
                     break;
                 }
             }
             arr[j+1] = value;
         }
-
-
     }
-
-
 }

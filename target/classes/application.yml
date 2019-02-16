@@ -1,0 +1,17 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+guard:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/guard?useUnicode=true&amp
+    username: root
+    password: P@ssw0rd
+rule:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/rule?useUnicode=true&amp
+    username: root
+    password: P@ssw0rd
+
+

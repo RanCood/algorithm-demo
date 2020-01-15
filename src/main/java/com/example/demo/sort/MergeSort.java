@@ -1,6 +1,8 @@
 package com.example.demo.sort;
 
 
+import org.apache.tomcat.util.security.Escape;
+
 /**
  * @author zg
  * @date 2019/1/19 16:15
@@ -16,6 +18,44 @@ public class MergeSort {
             System.out.print(i + "=>");
         }
     }
+
+
+    public static void mergeSort1(int[] arr, int n) {
+        mergeSortC1(arr, 0, n - 1);
+
+    }
+
+    private static void mergeSortC1(int[] arr, int s, int e) {
+        if (s >= e) {
+            return;
+        }
+        int mid = (s + e) / 2;
+        mergeSortC1(arr, s, mid);
+        mergeSortC1(arr, mid + 1, e);
+        merge1(arr, s, mid + 1, e);
+    }
+
+    private static void merge1(int[] arr, int start, int mid, int e) {
+        int[] tmp = new int[arr.length];
+        int i = 0, s = start;
+        while (s <= mid && mid <= e) {
+            if (arr[s] < arr[mid]) {
+                tmp[i++] = arr[s++];
+            } else {
+                tmp[i++] = arr[mid++];
+            }
+        }
+        while (s <= mid) {
+            tmp[i++] = arr[s++];
+        }
+        while (mid <= e) {
+            tmp[i++] = arr[mid++];
+        }
+        for (int n = 0; n < tmp.length; n++) {
+            arr[i++] = tmp[n];
+        }
+    }
+
 
     public static void mergeSort(int[] arr, int length) {
         mergeSortC(arr, 0, length - 1);

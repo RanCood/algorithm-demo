@@ -43,12 +43,12 @@ public class Application {
     public JdbcTemplate guardJdbcTemplate(DataSource guardDataSource) {
         return new JdbcTemplate(guardDataSource);
     }
-
-    @Bean
-    @Resource
-    public PlatformTransactionManager guardTxManager(DataSource guardDataSource) {
-        return new DataSourceTransactionManager(guardDataSource);
-    }
+//
+//    @Bean
+//    @Resource
+//    public PlatformTransactionManager guardTxManager(DataSource guardDataSource) {
+//        return new DataSourceTransactionManager(guardDataSource);
+//    }
 
     @Bean
     @ConfigurationProperties("rule.datasource")
@@ -68,9 +68,9 @@ public class Application {
         return new JdbcTemplate(ruleDataSource);
     }
 
-    @Bean
-    @Resource
-    public PlatformTransactionManager ruleTxManager(DataSource ruleDataSource) {
-        return new DataSourceTransactionManager(ruleDataSource);
-    }
+//    @Bean
+//    @Resource
+//    public PlatformTransactionManager ruleTxManager(DataSource ruleDataSource) {
+//        return new DataSourceTransactionManager(ruleDataSource);
+//    }
 }

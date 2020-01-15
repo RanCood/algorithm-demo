@@ -18,7 +18,6 @@ public class ConsistentHash<T> {
         for (T node : nodes) {
             add(node);
         }
-        ;
     }
 
     public void add(T node) {

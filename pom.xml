@@ -6,7 +6,10 @@
     <groupId>com.example</groupId>
     <artifactId>algorithm-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>design-mode</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>algorithm-demo</name>
     <description>Demo project for Spring Boot</description>
